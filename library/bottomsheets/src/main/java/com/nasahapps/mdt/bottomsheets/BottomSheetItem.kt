@@ -15,7 +15,7 @@ class BottomSheetItem {
     val menuId: Int
 
     @JvmOverloads
-    constructor(text: CharSequence, icon: Drawable, menuId: Int = 0) {
+    constructor(text: CharSequence, icon: Drawable? = null, menuId: Int = 0) {
         this.text = text
         this.icon = icon
         this.menuId = menuId
