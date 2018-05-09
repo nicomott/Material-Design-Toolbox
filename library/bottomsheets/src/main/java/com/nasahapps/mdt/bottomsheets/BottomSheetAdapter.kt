@@ -29,7 +29,8 @@ abstract class BottomSheetAdapter constructor(private val mItems: List<BottomShe
             icon = Utils.getTintedDrawable(icon, mIconTint)
         }
         holder.icon.setImageDrawable(icon)
-
+        holder.icon.setVisibility(if (icon != null) View.VISIBLE else View.GONE)
+      
         holder.itemView.setOnClickListener {
             mListener?.onClick(mDialog, holder.adapterPosition, mItems[holder.adapterPosition].menuId)
         }
